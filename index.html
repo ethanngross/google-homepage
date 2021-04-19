@@ -7,26 +7,101 @@
                 margin: 0;
                 padding: 0;
             }
+
+            li.bottom {
+                position: absolute;
+                bottom: 0;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                color: gray;
+                font-size: 13px;
+                font: Arial;
+                text-decoration: none;
+                text-align: center;
+                display: block;
+                padding: 20px;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            button.blue {
+                background-color: rgb(66, 133, 244);
+                color: white;
+                font-weight: 700;
+                font-size: 13px;
+                font-family: Arial;
+            }
+
+            button.transparent {
+                background-color: transparent;
+                border: 0px;
+            }
+
+            .container {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                row-gap: 200px;
+            }
+
+            .top {
+                /* background-color: red; */
+                grid-column: 1/4;
+                grid-row: 1/2;
+            }
+
+            .middle {
+                /* background-color: blue; */
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+
+            .bottom {
+                /* background-color: green; */
+                grid-column: 1/4;
+                grid-row: 3/4;
+            }
         </style>
     </head>
     <body>
-        <div>
-            <ul>
-                <li><a href="About">Home</a></li>
-                <li><a href="Store">News</a></li>
-                <li><a href="Gmail">Contact</a></li>
-                <li><a href="Images">About</a></li>
-                <li><button type="submit">apps</button></li>
-                <li><button type="submit">Sign In</button></li>
-              </ul>
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
-            <form>
-                <img src="blacksearch.png" alt="search logo">
-                <input type="text">
-                <img src="blackmic.png" alt="mic logo">
-                <button type="submit">Google Search</button>
-                <button type="submit">I'm Feeling Lucky</button>
-            </form>
+        <div class="container">
+            <div class="top">
+                <ul>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Store">Store</a></li>
+                    <li><a href="Gmail">Gmail</a></li>
+                    <li><a href="Images">Images</a></li>
+                    <li><button type="submit" class="transparent"><img src="blackapps.png" alt="apps logo"></button></li>
+                    <li><button type="submit" class="blue">Sign In</button></li>
+                </ul>
+            </div>
+            <div class="middle">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
+                <form>
+                    <img src="blacksearch.png" alt="search logo">
+                    <input type="text">
+                    <img src="blackmic.png" alt="mic logo">
+                    <button type="submit">Google Search</button>
+                    <button type="submit">I'm Feeling Lucky</button>
+                </form>
+            </div>
+            <div class="bottom">
+                <ul class = "special">
+                    <li><a href="Advertising">Advertising</a></li>
+                    <li><a href="Business">Business</a></li>
+                    <li><a href="How Search Works">How Search Works</a></li>
+                    <li><a href="Privacy">Privacy</a></li>
+                    <li><a href="Terms">Terms</a></li>
+                    <li><a href="Settings">Settings</a></li>
+                    </ul>
+            </div>
         </div>
     </body>
 </html>
