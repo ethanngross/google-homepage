@@ -8,18 +8,13 @@
                 padding: 0;
             }
 
-            li.bottom {
-                position: absolute;
-                bottom: 0;
-            }
-
             li {
                 float: left;
             }
 
             li a {
                 color: gray;
-                font-size: 13px;
+                font-size: 14px;
                 font: Arial;
                 text-decoration: none;
                 text-align: center;
@@ -39,69 +34,196 @@
                 font-family: Arial;
             }
 
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
             button.transparent {
                 background-color: transparent;
                 border: 0px;
             }
-
-            .container {
-                display: grid;
-                grid-template-rows: 1fr 1fr 1fr;
-                grid-template-columns: 1fr 1fr 1fr;
-                row-gap: 200px;
+            
+            header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                max-height: 10vh;
+                min-width: 100vw;
             }
 
-            .top {
-                /* background-color: red; */
-                grid-column: 1/4;
-                grid-row: 1/2;
+            .inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                max-height: 80vh;
+                min-height: 80vh;
             }
 
-            .middle {
-                /* background-color: blue; */
-                grid-column: 2/3;
-                grid-row: 2/3;
+            footer {
+                background-color:rgb(242, 242, 242);
+                max-height: 10vh;
+                min-width: 100vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: 0px;
             }
 
-            .bottom {
-                /* background-color: green; */
-                grid-column: 1/4;
-                grid-row: 3/4;
+            .buttons{
+                padding: 20px;
+                
             }
+
+            .search {
+                font: arial;
+                color: rgb(95, 99, 104);
+                font-size: 14px;
+                height: 36px;
+                margin-left: 4px;
+                margin-right: 4px;
+                min-width: 54px;
+                text-align: center;
+                margin-top: 11px;
+                margin-bottom: 11px;
+                border-top-right-radius: 4px;
+                border-top-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                border-bottom-left-radius: 4px;
+                border-bottom-width: 1px;
+                border-left-width: 1px;
+                border-top-width: 1px;
+                border-right-width: 1px;
+                border-bottom-color: rgb(242, 242, 242);
+                border-right-color: rgb(242, 242, 242);
+                border-left-color: rgb(242, 242, 242);
+                border-top-color: rgb(242, 242, 242);
+                border-bottom-style: solid;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-left-style: solid;
+                text-shadow: none;
+                font-weight: 400;
+                border-image-outset: 0;
+                z-index: 900;
+            }
+            
+            .search:hover{
+                border-bottom-color:  rgb(95, 99, 104);
+                border-right-color:  rgb(95, 99, 104);
+                border-left-color:  rgb(95, 99, 104);
+                border-top-color:  rgb(95, 99, 104);
+            }
+
+            .searching {
+                padding-right: 20px;
+                padding-left: 10px;
+                margin-bottom: -10px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+
+            .mic {
+                padding-right: 10px;
+                padding-left: 20px;
+                margin-bottom: -10px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+            
+            .bar {
+                width: 350px;
+                border-color: white;
+                border-left-style: solid;
+                border-top-style: solid;
+                z-index: 1000;
+                font-size: 16px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .bar:focus{
+                outline: none;
+            }
+            
+            .searchbo{
+                border-bottom-color: rgb(242, 242, 242);
+                border-right-color: rgb(242, 242, 242);
+                border-left-color: rgb(242, 242, 242);
+                border-top-color: rgb(242, 242, 242);
+                border-bottom-width: 1px;
+                border-left-width: 1px;
+                border-top-width: 1px;
+                border-right-width: 1px;
+                border-bottom-style: solid;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-left-style: solid;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            .logo {
+                padding-bottom: 20px;
+            }
+
+
+
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="top">
+        <header>
+            <div>
                 <ul>
                     <li><a href="About">About</a></li>
                     <li><a href="Store">Store</a></li>
+                </ul>
+            </div>
+            <div class="top_right">
+                <ul class="align_right">
                     <li><a href="Gmail">Gmail</a></li>
                     <li><a href="Images">Images</a></li>
                     <li><button type="submit" class="transparent"><img src="blackapps.png" alt="apps logo"></button></li>
                     <li><button type="submit" class="blue">Sign In</button></li>
                 </ul>
             </div>
-            <div class="middle">
-                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
+        </header>  
+        <div class="inner">
+                <div class="logo"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
+                </div>
+                <div>
                 <form>
-                    <img src="blacksearch.png" alt="search logo">
-                    <input type="text">
-                    <img src="blackmic.png" alt="mic logo">
-                    <button type="submit">Google Search</button>
-                    <button type="submit">I'm Feeling Lucky</button>
+                    <div class="searchbo">
+                        <img class="searching" src="blacksearch.png" alt="search logo">
+                        <input class="bar" type="text">
+                        <img class="mic" src="blackmic.png" alt="mic logo">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="search">Google Search</button>
+                        <button type="submit" class="search">I'm Feeling Lucky</button>
+                    </div>
                 </form>
-            </div>
-            <div class="bottom">
-                <ul class = "special">
-                    <li><a href="Advertising">Advertising</a></li>
-                    <li><a href="Business">Business</a></li>
-                    <li><a href="How Search Works">How Search Works</a></li>
-                    <li><a href="Privacy">Privacy</a></li>
-                    <li><a href="Terms">Terms</a></li>
-                    <li><a href="Settings">Settings</a></li>
-                    </ul>
-            </div>
         </div>
+            </div>
+            <footer class="bottom">
+                <div>
+                    <ul class = "special">
+                            <li><a href="Advertising">Advertising</a></li>
+                            <li><a href="Business">Business</a></li>
+                            <li><a href="How Search Works">How Search Works</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                            <li><a href="Privacy">Privacy</a></li>
+                            <li><a href="Terms">Terms</a></li>
+                            <li><a href="Settings">Settings</a></li>
+                    </ul>
+                </div>
+            </footer>
     </body>
 </html>
